@@ -1,0 +1,2 @@
+cart.html
+payment.html

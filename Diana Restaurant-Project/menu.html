@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Diana Restaurant</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.19/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="./imgs/favicon.ico">
+    <style>
+        /* Hide all tab content by default */
+        .tab-content {
+            display: none;
+        }
+
+        /* Show only the selected tab content */
+        #all-tab:checked ~ .tab-content-wrapper #all-content,
+        #appetizers-tab:checked ~ .tab-content-wrapper #appetizers-content,
+        #mains-tab:checked ~ .tab-content-wrapper #mains-content,
+        #desserts-tab:checked ~ .tab-content-wrapper #desserts-content,
+        #drinks-tab:checked ~ .tab-content-wrapper #drinks-content {
+            display: block;
+        }
+
+        /* Style active tab labels */
+        .tab-label {
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            background-color: white;
+            color: rgb(146 64 14);
+            border: 2px solid rgb(245 158 11);
+            margin: 0 4px;
+        }
+
+        #all-tab:checked ~ .tabs-wrapper label[for="all-tab"],
+        #appetizers-tab:checked ~ .tabs-wrapper label[for="appetizers-tab"],
+        #mains-tab:checked ~ .tabs-wrapper label[for="mains-tab"],
+        #desserts-tab:checked ~ .tabs-wrapper label[for="desserts-tab"],
+        #drinks-tab:checked ~ .tabs-wrapper label[for="drinks-tab"] {
+            background-color: rgb(217 119 6);
+            color: white;
+            border-color: rgb(217 119 6);
+        }
+
+        /* Tab hover effects */
+        .tab-label:hover {
+            background-color: rgb(251 191 36);
+            color: white;
+            border-color: rgb(251 191 36);
+        }
+
+        /* Smooth transitions */
+        .tab-content {
+            animation: fadeIn 0.4s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { 
+                opacity: 0; 
+                transform: translateY(10px);
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0);
+            }
+        }
+
+        /* Hide radio buttons */
+        .tab-radio {
+            display: none;
+        }
+
+        /* Tab container styling */
+        .tabs-container {
+            background: linear-gradient(135deg, rgb(254 243 199) 0%, rgb(253 230 138) 100%);
+            padding: 2rem 0;
+        }
+    </style>
+</head>
+<body class="font-inter">
+    <!-- Navigation -->
+    <nav class="navbar bg-white shadow-lg fixed top-0 z-50">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"></path>
+                    </svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a href="index.html" class="text-amber-900 hover:text-amber-700">Home</a></li>
+                    <li><a href="menu.html" class="text-amber-900 hover:text-amber-700">Menu</a></li>
+                    <li><a href="about.html" class="text-amber-900 hover:text-amber-700">About</a></li>
+                    <li><a href="contact.html" class="text-amber-900 hover:text-amber-700">Contact</a></li>
+                    <li><a href="locations.html" class="text-amber-900 hover:text-amber-700">Locations</a></li>
+                    <li><a href="social.html" class="text-amber-900 hover:text-amber-700">Social</a></li>
+                </ul>
+            </div>
+            <a href="index.html" class="btn btn-ghost text-xl text-amber-900 font-bold">
+                <svg class="w-8 h-8 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"></path>
+                </svg>
+                Diana Restaurant
+            </a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+                <li><a href="index.html" class="text-amber-900 hover:text-amber-700 font-medium">Home</a></li>
+                <li><a href="menu.html" class="text-amber-900 hover:text-amber-700 font-medium bg-amber-100">Menu</a></li>
+                <li><a href="about.html" class="text-amber-900 hover:text-amber-700 font-medium">About</a></li>
+                <li><a href="contact.html" class="text-amber-900 hover:text-amber-700 font-medium">Contact</a></li>
+                <li><a href="locations.html" class="text-amber-900 hover:text-amber-700 font-medium">Locations</a></li>
+                <li><a href="social.html" class="text-amber-900 hover:text-amber-700 font-medium">Social</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <main class="pt-16">
+        <section class="hero py-16 bg-amber-900 text-white relative overflow-hidden">
+            <div class="absolute w-full h-full top-0 left-0 z-0 animate-pulse" style="background: url('./image4.jpg') center/cover no-repeat; opacity: 0.15;"></div>
+            <div class="hero-content text-center relative z-10">
+                <div class="max-w-4xl">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4 animate-bounce">Our Menu</h1>
+                    <marquee class="text-xl opacity-90 font-bold text-amber-200 mb-2" behavior="scroll" direction="left">Welcome to Diana Restaurant - Nyendo, Masaka City | Call: 0753434801 | Enjoy our delicious Ugandan cuisine!</marquee>
+                    <p class="text-xl opacity-90">Discover the authentic flavors of Uganda with our carefully crafted dishes, made from the finest local ingredients and traditional recipes</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tab System -->
+        <div class="tabs-container">
+            <!-- Hidden Radio Inputs -->
+            <input type="radio" name="menu" id="all-tab" class="tab-radio" checked>
+            <input type="radio" name="menu" id="appetizers-tab" class="tab-radio">
+            <input type="radio" name="menu" id="mains-tab" class="tab-radio">
+            <input type="radio" name="menu" id="desserts-tab" class="tab-radio">
+            <input type="radio" name="menu" id="drinks-tab" class="tab-radio">
+
+            <!-- Tab Labels -->
+            <div class="tabs-wrapper">
+                <div class="container mx-auto px-4">
+                    <div class="flex justify-center flex-wrap gap-2">
+                        <label for="all-tab" class="tab-label">🍽️ All</label>
+                        <label for="appetizers-tab" class="tab-label">🥘 Appetizers</label>
+                        <label for="mains-tab" class="tab-label">🍽️ Main Dishes</label>
+                        <label for="desserts-tab" class="tab-label">🍰 Desserts</label>
+                        <label for="drinks-tab" class="tab-label">🥤 Beverages</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="tab-content-wrapper py-16">
+                <!-- All Content -->
+                <div id="all-content" class="tab-content">
+                    <div class="container mx-auto px-4">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl font-bold text-amber-900 mb-4">All Menu Items</h2>
+                            <p class="text-gray-600 max-w-2xl mx-auto">Browse everything Diana Restaurant offers below.</p>
+                        </div>
+                        <!-- Appetizers -->
+                        <div class="mb-12">
+                            <h3 class="text-2xl font-bold text-amber-800 mb-4">Appetizers</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+                                    <figure class="h-48">
+                                        <img src="./imgs/samosas.jpeg" alt="Samosas" class="w-full h-full object-cover" />
+                                    </figure>
+                                    <div class="card-body">
+                                        <div class="flex justify-between items-start mb-2">
+                                            <h3 class="card-title text-amber-900">Samosas</h3>
+                                            <span class="badge badge-primary bg-amber-600 border-amber-600">Popular</span>
+                                        </div>
+                                        <p class="text-gray-600 mb-4">Crispy triangular pastries filled with spiced vegetables or meat</p>
+                                        <div class="card-actions justify-between items-center">
+                                            <span class="text-lg font-bold text-green-600">UGX 5,000</span>
+                                            <button class="btn btn-primary bg-amber-600 border-amber-600 hover:bg-amber-700">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+                                    <figure class="h-48">
+                                        <img src="./imgs/chapati.jpeg" alt="Chapati Rolls" class="w-full h-full object-cover" />
+                                    </figure>
+                                    <div class="card-body">
+                                        <h3 class="card-title text-amber-900">Chapati Rolls</h3>
+                                        <p class="text-gray-600 mb-4">Soft chapati bread with seasoned vegetables and sauce</p>
+                                        <div class="card-actions justify-between items-center">
+                                            <span class="text-lg font-bold text-green-600">UGX 8,000</span>
+                                            <button class="btn btn-primary bg-amber-600 border-amber-600 hover:bg-amber-700">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+                                    <figure class="h-48">
+                                        <img src="https://images.pexels.com/photos/539451/pexels-photo-539451.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Groundnut Soup" class="w-full h-full object-cover" />
+                                    </figure>
+                                    <div class="card-body">
+                                        <h3 class="card-title text-amber-900">Groundnut Soup</h3>
+                                        <p class="text-gray-600 mb-4">Traditional peanut soup with vegetables and spices</p>
+                                        <div class="card-actions justify-between items-center">
+                                            <span class="text-lg font-bold text-green-600">UGX 12,000</span>
+                                            <button class="btn btn-primary bg-amber-600 border-amber-600 hover:bg-amber-700">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Main Dishes -->
+                        <div class="mb-12">
+                            <h3 class="text-2xl font-bold text-amber-800 mb-4">Main Dishes</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+                                    <figure class="h-48">
+                                        <img src="./imgs/download.jpeg" alt="Matoke with Groundnut Sauce" class="w-full h-full object-cover" />
+                                    </figure>
+                                    <div class="card-body">
+                                        <div class="flex justify-between items-start mb-2">
+                                            <h3 class="card-title text-amber-900">Matoke with Groundnut Sauce</h3>
+                                            <span class="badge badge-primary bg-amber-600 border-amber-600">Popular</span>
+                                        </div>
+                                        <p class="text-gray-600 mb-4">Steamed green bananas in rich, creamy groundnut sauce</p>
+                                        <div class="card-actions justify-between items-center">
+                                            <span class="text-lg font-bold text-green-600">UGX 18,000</span>
+                                            <button class="btn btn-primary bg-amber-600 border-amber-600 hover:bg-amber-700">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+                                    <figure class="h-48">
+                                        <img src="./imgs/images.jpeg" alt="Luwombo" class="w-full h-full object-cover" />
+                                    </figure>
+                                    <div class="card-body">
+                                        <div class="flex justify-between items-start mb-2">
+                                            <h3 class="card-title text-amber-900">Luwombo (Chicken)</h3>
+                                            <span class="badge badge-primary bg-amber-600 border-amber-600">Popular</span>
+                                        </div>
+                                        <p class="text-gray-600 mb-4">Traditional steamed chicken wrapped in banana leaves</p>
+                                        <div class="card-actions justify-between items-center">
+                                            <span class="text-lg font-bold text-green-600">UGX 25,000</span>
+                                            <button class="btn btn-primary bg-amber-600 border-amber-600 hover:bg-amber-700">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+                                    <figure class="h-48">
+                                        <img src="https://images.pexels.com/photos/725991/pexels-photo-725991.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Grilled Tilapia" class="w-full h-full object-cover" />
+                                    </figure>
+                                    <div class="card-body">
+                                        <h3 class="card-title text-amber-900">Grilled Tilapia</h3>
+                                        <p class="text-gray-600 mb-4">Fresh tilapia from Lake Victoria with herbs and spices</p>
+                                        <div class="card-actions justify-between items-center">
+                                            <span class="text-lg font-bold text-green-600">UGX 22,000</span>
+                                            <button class="btn btn-primary bg-amber-600 border-amber-600 hover:bg-amber-700">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+                                    <figure class="h-48">
+                                        <img src="./imgs/ppp.jpeg" alt="Beef Stew" class="w-full h-full object-cover" />
+                                    </figure>
+                                    <div class="card-body">
+                                        <h3 class="card-title text-amber-900">Beef Stew with Posho</h3>
+                                        <p class="text-gray-600 mb-4">Tender beef in rich tomato sauce served with maize meal</p>
+                                        <div class="card-actions justify-between items-center">
+                                            <span class="text-lg font-bold text-green-600">UGX 20,000</span>
+                                            <button class="btn btn-primary bg-amber-600 border-amber-600 hover:bg-amber-700">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+                                    <figure class="h-48">
+                                        <img src="./imgs/download (2).jpeg" alt="Grilled Beef" class="w-full h-full object-cover" />
+                                    </figure>
+                                    <div class="card-body">
+                                        <h3 class="card-title text-amber-900">Grilled Beef</h3>
+                                        <p class="text-gray-600 mb-4">Tender, juicy grilled beef, seasoned to perfection and served hot</p>
+                                        <div class="card-actions justify-between items-center">
+                                            <span class="text-lg font-bold text-green-600">UGX 16,000</span>
+                                            <button class="btn btn-primary bg-amber-600 border-amber-600 hover:bg-amber-700">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+                                    <figure class="h-48">
+                                        <img src="https://images.pexels.com/photos/9609844/pexels-photo-9609844.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Rolex Special" class="w-full h-full object-cover" />
+                                    </figure>
+                                    <div class="card-body">
+                                        <h3 class="card-title text-amber-900">Rolex Special</h3>
+                                        <p class="text-gray-600 mb-4">Chapati rolled with eggs, vegetables, and choice of meat</p>
+                                        <div class="card-actions justify-between items-center">
+                                            <span class="text-lg font-bold text-green-600">UGX 10,000</span>
+                                            <button class="btn btn-primary bg-amber-600 border-amber-600 hover:bg-amber-700">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Desserts -->
+                        <div class="mb-12">
+                            <h3 class="text-2xl font-bold text-amber-800 mb-4">Desserts</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+                                    <figure class="h-48">
+                                        <img src="https://images.pexels.com/photos/230325/pexels-photo-230325.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Sim-Sim Cookies" class="w-full h-full object-cover" />
+                                    </figure>
+                                    <div class="card-body">
+                                        <div class="flex justify-between items-start mb-2">
+                                            <h3 class="card-title text-amber-900">Sim-Sim Cookies</h3>
+                                            <span class="badge badge-primary bg-amber-600 border-amber-600">Popular</span>
+                                        </div>
+                                        <p class="text-gray-600 mb-4">Traditional sesame seed cookies, sweet and crunchy</p>
+                                        <div class="card-actions justify-between items-center">
+                                            <span class="text-lg font-bold text-green-600">UGX 6,000</span>
+                                            <button class="btn btn-primary bg-amber-600 border-amber-600 hover:bg-amber-700">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+                                    <figure class="h-48">
+                                        <img src="https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Sweet Banana Cake" class="w-full h-full object-cover" />
+                                    </figure>
+                                    <div class="card-body">
+                                        <h3 class="card-title text-amber-900">Sweet Banana Cake</h3>
+                                        <p class="text-gray-600 mb-4">Moist cake made with ripe Ugandan bananas</p>
+                                        <div class="card-actions justify-between items-center">
+                                            <span class="text-lg font-bold text-green-600">UGX 8,000</span>
+                                            <button class="btn btn-primary bg-amber-600 border-amber-600 hover:bg-amber-700">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+                                    <figure class="h-48">
+                                        <img src="https://images.pexels.com/photos/1028714/pexels-photo-1028714.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Passion Fruit Mousse" class="w-full h-full object-cover" />
+                                    </figure>
+                                    <div class="card-body">
+                                        <h3 class="card-title text-amber-900">Passion Fruit Mousse</h3>
+                                        <p class="text-gray-600 mb-4">Light and airy mousse with fresh passion fruit</p>
+                                        <div class="card-actions justify-between items-center">
+                                            <span class="text-lg font-bold text-green-600">UGX 10,000</span>
+                                            <button class="btn btn-primary bg-amber-600 border-amber-600 hover:bg-amber-700">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Beverages -->
+                        <div class="mb-12">
+                            <h3 class="text-2xl font-bold text-amber-800 mb-4">Beverages</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+                                    <figure class="h-48">
+                                        <img src="https://images.pexels.com/photos/96974/pexels-photo-96974.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Fresh Passion Juice" class="w-full h-full object-cover" />
+                                    </figure>
+                                    <div class="card-body">
+                                        <div class="flex justify-between items-start mb-2">
+                                            <h3 class="card-title text-amber-900">Fresh Passion Juice</h3>
+                                            <span class="badge badge-primary bg-amber-600 border-amber-600">Popular</span>
+                                        </div>
+                                        <p class="text-gray-600 mb-4">Freshly squeezed passion fruit juice</p>
+                                        <div class="card-actions justify-between items-center">
+                                            <span class="text-lg font-bold text-green-600">UGX 5,000</span>
+                                            <button class="btn btn-primary bg-amber-600 border-amber-600 hover:bg-amber-700">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+                                    <figure class="h-48">
+                                        <img src="https://images.pexels.com/photos/1893555/pexels-photo-1893555.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Mango Smoothie" class="w-full h-full object-cover" />
+                                    </figure>
+                                    <div class="card-body">
+                                        <h3 class="card-title text-amber-900">Mango Smoothie</h3>
+                                        <p class="text-gray-600 mb-4">Creamy smoothie made with fresh Ugandan mangoes</p>
+                                        <div class="card-actions justify-between items-center">
+                                            <span class="text-lg font-bold text-green-600">UGX 6,000</span>
+                                            <button class="btn btn-primary bg-amber-600 border-amber-600 hover:bg-amber-700">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+                                    <figure class="h-48">
+                                        <img src="https://images.pexels.com/photos/1638280/pexels-photo-1638280.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Traditional Tea" class="w-full h-full object-cover" />
+                                    </figure>
+                                    <div class="card-body">
+                                        <h3 class="card-title text-amber-900">Traditional Tea</h3>
+                                        <p class="text-gray-600 mb-4">Spiced tea with milk and local herbs</p>
+                                        <div class="card-actions justify-between items-center">
+                                            <span class="text-lg font-bold text-green-600">UGX 3,000</span>
+                                            <button class="btn btn-primary bg-amber-600 border-amber-600 hover:bg-amber-700">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+                                    <figure class="h-48">
+                                        <img src="https://images.pexels.com/photos/1337824/pexels-photo-1337824.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Fresh Coconut Water" class="w-full h-full object-cover" />
+                                    </figure>
+                                    <div class="card-body">
+                                        <h3 class="card-title text-amber-900">Fresh Coconut Water</h3>
+                                        <p class="text-gray-600 mb-4">Natural coconut water served fresh</p>
+                                        <div class="card-actions justify-between items-center">
+                                            <span class="text-lg font-bold text-green-600">UGX 4,000</span>
+                                            <button class="btn btn-primary bg-amber-600 border-amber-600 hover:bg-amber-700">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Appetizers Content -->
+                <div id="appetizers-content" class="tab-content">
+                    <div class="container mx-auto px-4">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl font-bold text-amber-900 mb-4">Appetizers</h2>
+                            <p class="text-gray-600 max-w-2xl mx-auto">Start your culinary journey with our delicious appetizers, perfect for sharing or enjoying as a light meal</p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+                                <figure class="h-48">
+                                    <img src="./imgs/samosas.jpeg" alt="Samosas" class="w-full h-full object-cover" />
+                                </figure>
+                                <div class="card-body">
+                                    <div class="flex justify-between items-start mb-2">
+                                        <h3 class="card-title text-amber-900">Samosas</h3>
+                                        <span class="badge badge-primary bg-amber-600 border-amber-600">Popular</span>
+                                    </div>
+                                    <p class="text-gray-600 mb-4">Crispy triangular pastries filled with spiced vegetables or meat</p>
+                                    <div class="card-actions justify-between items-center">
+                                        <span class="text-lg font-bold text-green-600">UGX 5,000</span>
+                                        <button class="btn btn-primary bg-amber-600 border-amber-600 hover:bg-amber-700">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+                                <figure class="h-48">
+                                    <img src="./imgs/chapati.jpeg" alt="Chapati Rolls" class="w-full h-full object-cover" />
+                                </figure>
+                                <div class="card-body">
+                                    <h3 class="card-title text-amber-900">Chapati Rolls</h3>
+                                    <p class="text-gray-600 mb-4">Soft chapati bread with seasoned vegetables and sauce</p>
+                                    <div class="card-actions justify-between items-center">
+                                        <span class="text-lg font-bold text-green-600">UGX 8,000</span>
+                                        <button class="btn btn-primary bg-amber-600 border-amber-600 hover:bg-amber-700">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+                                <figure class="h-48">
+                                    <img src="https://images.pexels.com/photos/539451/pexels-photo-539451.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Groundnut Soup" class="w-full h-full object-cover" />
+                                </figure>
+                                <div class="card-body">
+                                    <h3 class="card-title text-amber-900">Groundnut Soup</h3>
+                                    <p class="text-gray-600 mb-4">Traditional peanut soup with vegetables and spices</p>
+                                    <div class="card-actions justify-between items-center">
+                                        <span class="text-lg font-bold text-green-600">UGX 12,000</span>
+                                        <button class="btn btn-primary bg-amber-600 border-amber-600 hover:bg-amber-700">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Dishes Content -->
+                <div id="mains-content" class="tab-content">
+                    <div class="container mx-auto px-4">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl font-bold text-amber-900 mb-4">Main Dishes</h2>
+                            <p class="text-gray-600 max-w-2xl mx-auto">Hearty and satisfying main courses featuring the best of Ugandan cuisine</p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+                                <figure class="h-48">
+                                    <img src="./imgs/download.jpeg" alt="Matoke with Groundnut Sauce" class="w-full h-full object-cover" />
+                                </figure>
+                                <div class="card-body">
+                                    <div class="flex justify-between items-start mb-2">
+                                        <h3 class="card-title text-amber-900">Matoke with Groundnut Sauce</h3>
+                                        <span class="badge badge-primary bg-amber-600 border-amber-600">Popular</span>
+                                    </div>
+                                    <p class="text-gray-600 mb-4">Steamed green bananas in rich, creamy groundnut sauce</p>
+                                    <div class="card-actions justify-between items-center">
+                                        <span class="text-lg font-bold text-green-600">UGX 18,000</span>
+                                        <button class="btn btn-primary bg-amber-600 border-amber-600 hover:bg-amber-700">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+                                <figure class="h-48">
+                                    <img src="./imgs/images.jpeg" alt="Luwombo" class="w-full h-full object-cover" />
+                                </figure>
+                                <div class="card-body">
+                                    <div class="flex justify-between items-start mb-2">
+                                        <h3 class="card-title text-amber-900">Luwombo (Chicken)</h3>
+                                        <span class="badge badge-primary bg-amber-600 border-amber-600">Popular</span>
+                                    </div>
+                                    <p class="text-gray-600 mb-4">Traditional steamed chicken wrapped in banana leaves</p>
+                                    <div class="card-actions justify-between items-center">
+                                        <span class="text-lg font-bold text-green-600">UGX 25,000</span>
+                                        <button class="btn btn-primary bg-amber-600 border-amber-600 hover:bg-amber-700">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+                                <figure class="h-48">
+                                    <img src="https://images.pexels.com/photos/725991/pexels-photo-725991.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Grilled Tilapia" class="w-full h-full object-cover" />
+                                </figure>
+                                <div class="card-body">
+                                    <h3 class="card-title text-amber-900">Grilled Tilapia</h3>
+                                    <p class="text-gray-600 mb-4">Fresh tilapia from Lake Victoria with herbs and spices</p>
+                                    <div class="card-actions justify-between items-center">
+                                        <span class="text-lg font-bold text-green-600">UGX 22,000</span>
+                                        <button class="btn btn-primary bg-amber-600 border-amber-600 hover:bg-amber-700">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+                                <figure class="h-48">
+                                    <img src="./imgs/ppp.jpeg" alt="Beef Stew" class="w-full h-full object-cover" />
+                                </figure>
+                                <div class="card-body">
+                                    <h3 class="card-title text-amber-900">Beef Stew with Posho</h3>
+                                    <p class="text-gray-600 mb-4">Tender beef in rich tomato sauce served with maize meal</p>
+                                    <div class="card-actions justify-between items-center">
+                                        <span class="text-lg font-bold text-green-600">UGX 20,000</span>
+                                        <button class="btn btn-primary bg-amber-600 border-amber-600 hover:bg-amber-700">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+                                <figure class="h-48">
+                                    <img src="./imgs/download (2).jpeg" alt="Grilled Beef" class="w-full h-full object-cover" />
+                                </figure>
+                                <div class="card-body">
+                                    <h3 class="card-title text-amber-900">Grilled Beef</h3>
+                                    <p class="text-gray-600 mb-4">Tender, juicy grilled beef, seasoned to perfection and served hot</p>
+                                    <div class="card-actions justify-between items-center">
+                                        <span class="text-lg font-bold text-green-600">UGX 16,000</span>
+                                        <button class="btn btn-primary bg-amber-600 border-amber-600 hover:bg-amber-700">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+                                <figure class="h-48">
+                                    <img src="https://images.pexels.com/photos/9609844/pexels-photo-9609844.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Rolex Special" class="w-full h-full object-cover" />
+                                </figure>
+                                <div class="card-body">
+                                    <h3 class="card-title text-amber-900">Rolex Special</h3>
+                                    <p class="text-gray-600 mb-4">Chapati rolled with eggs, vegetables, and choice of meat</p>
+                                    <div class="card-actions justify-between items-center">
+                                        <span class="text-lg font-bold text-green-600">UGX 10,000</span>
+                                        <button class="btn btn-primary bg-amber-600 border-amber-600 hover:bg-amber-700">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desserts Content -->
+                <div id="desserts-content" class="tab-content">
+                    <div class="container mx-auto px-4">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl font-bold text-amber-900 mb-4">Desserts</h2>
+                            <p class="text-gray-600 max-w-2xl mx-auto">Sweet endings to perfect your dining experience with traditional Ugandan desserts</p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+                                <figure class="h-48">
+                                    <img src="https://images.pexels.com/photos/230325/pexels-photo-230325.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Sim-Sim Cookies" class="w-full h-full object-cover" />
+                                </figure>
+                                <div class="card-body">
+                                    <div class="flex justify-between items-start mb-2">
+                                        <h3 class="card-title text-amber-900">Sim-Sim Cookies</h3>
+                                        <span class="badge badge-primary bg-amber-600 border-amber-600">Popular</span>
+                                    </div>
+                                    <p class="text-gray-600 mb-4">Traditional sesame seed cookies, sweet and crunchy</p>
+                                    <div class="card-actions justify-between items-center">
+                                        <span class="text-lg font-bold text-green-600">UGX 6,000</span>
+                                        <button class="btn btn-primary bg-amber-600 border-amber-600 hover:bg-amber-700">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+                                <figure class="h-48">
+                                    <img src="https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Sweet Banana Cake" class="w-full h-full object-cover" />
+                                </figure>
+                                <div class="card-body">
+                                    <h3 class="card-title text-amber-900">Sweet Banana Cake</h3>
+                                    <p class="text-gray-600 mb-4">Moist cake made with ripe Ugandan bananas</p>
+                                    <div class="card-actions justify-between items-center">
+                                        <span class="text-lg font-bold text-green-600">UGX 8,000</span>
+                                        <button class="btn btn-primary bg-amber-600 border-amber-600 hover:bg-amber-700">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+                                <figure class="h-48">
+                                    <img src="https://images.pexels.com/photos/1028714/pexels-photo-1028714.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Passion Fruit Mousse" class="w-full h-full object-cover" />
+                                </figure>
+                                <div class="card-body">
+                                    <h3 class="card-title text-amber-900">Passion Fruit Mousse</h3>
+                                    <p class="text-gray-600 mb-4">Light and airy mousse with fresh passion fruit</p>
+                                    <div class="card-actions justify-between items-center">
+                                        <span class="text-lg font-bold text-green-600">UGX 10,000</span>
+                                        <button class="btn btn-primary bg-amber-600 border-amber-600 hover:bg-amber-700">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Beverages Content -->
+                <div id="drinks-content" class="tab-content">
+                    <div class="container mx-auto px-4">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl font-bold text-amber-900 mb-4">Beverages</h2>
+                            <p class="text-gray-600 max-w-2xl mx-auto">Refresh yourself with our selection of traditional and fresh beverages</p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+                                <figure class="h-48">
+                                    <img src="https://images.pexels.com/photos/96974/pexels-photo-96974.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Fresh Passion Juice" class="w-full h-full object-cover" />
+                                </figure>
+                                <div class="card-body">
+                                    <div class="flex justify-between items-start mb-2">
+                                        <h3 class="card-title text-amber-900">Fresh Passion Juice</h3>
+                                        <span class="badge badge-primary bg-amber-600 border-amber-600">Popular</span>
+                                    </div>
+                                    <p class="text-gray-600 mb-4">Freshly squeezed passion fruit juice</p>
+                                    <div class="card-actions justify-between items-center">
+                                        <span class="text-lg font-bold text-green-600">UGX 5,000</span>
+                                        <button class="btn btn-primary bg-amber-600 border-amber-600 hover:bg-amber-700">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+                                <figure class="h-48">
+                                    <img src="https://images.pexels.com/photos/1893555/pexels-photo-1893555.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Mango Smoothie" class="w-full h-full object-cover" />
+                                </figure>
+                                <div class="card-body">
+                                    <h3 class="card-title text-amber-900">Mango Smoothie</h3>
+                                    <p class="text-gray-600 mb-4">Creamy smoothie made with fresh Ugandan mangoes</p>
+                                    <div class="card-actions justify-between items-center">
+                                        <span class="text-lg font-bold text-green-600">UGX 6,000</span>
+                                        <button class="btn btn-primary bg-amber-600 border-amber-600 hover:bg-amber-700">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+                                <figure class="h-48">
+                                    <img src="https://images.pexels.com/photos/1638280/pexels-photo-1638280.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Traditional Tea" class="w-full h-full object-cover" />
+                                </figure>
+                                <div class="card-body">
+                                    <h3 class="card-title text-amber-900">Traditional Tea</h3>
+                                    <p class="text-gray-600 mb-4">Spiced tea with milk and local herbs</p>
+                                    <div class="card-actions justify-between items-center">
+                                        <span class="text-lg font-bold text-green-600">UGX 3,000</span>
+                                        <button class="btn btn-primary bg-amber-600 border-amber-600 hover:bg-amber-700">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+                                <figure class="h-48">
+                                    <img src="https://images.pexels.com/photos/1337824/pexels-photo-1337824.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Fresh Coconut Water" class="w-full h-full object-cover" />
+                                </figure>
+                                <div class="card-body">
+                                    <h3 class="card-title text-amber-900">Fresh Coconut Water</h3>
+                                    <p class="text-gray-600 mb-4">Natural coconut water served fresh</p>
+                                    <div class="card-actions justify-between items-center">
+                                        <span class="text-lg font-bold text-green-600">UGX 4,000</span>
+                                        <button class="btn btn-primary bg-amber-600 border-amber-600 hover:bg-amber-700">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+     <!-- Footer -->
+    <footer class="bg-amber-900 text-white py-6 text-center mt-12">
+        <p class="text-amber-200">&copy; 2026 Diana Restaurant. Owned by Ampaire Diana Ritah. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+

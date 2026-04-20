@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locations - Diana Restaurant</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.19/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="./imgs/favicon.ico">
+</head>
+<body class="font-inter">
+    <!-- Navigation -->
+    <nav class="navbar bg-white shadow-lg fixed top-0 z-50">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"></path>
+                    </svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a href="index.html" class="text-amber-900 hover:text-amber-700">Home</a></li>
+                    <li><a href="menu.html" class="text-amber-900 hover:text-amber-700">Menu</a></li>
+                    <li><a href="about.html" class="text-amber-900 hover:text-amber-700">About</a></li>
+                    <li><a href="contact.html" class="text-amber-900 hover:text-amber-700">Contact</a></li>
+                    <li><a href="locations.html" class="text-amber-900 hover:text-amber-700">Locations</a></li>
+                    <li><a href="social.html" class="text-amber-900 hover:text-amber-700">Social</a></li>
+                </ul>
+            </div>
+            <a href="index.html" class="btn btn-ghost text-xl text-amber-900 font-bold">
+                <svg class="w-8 h-8 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"></path>
+                </svg>
+                Diana Restaurant
+            </a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+                <li><a href="index.html" class="text-amber-900 hover:text-amber-700 font-medium">Home</a></li>
+                <li><a href="menu.html" class="text-amber-900 hover:text-amber-700 font-medium">Menu</a></li>
+                <li><a href="about.html" class="text-amber-900 hover:text-amber-700 font-medium">About</a></li>
+                <li><a href="contact.html" class="text-amber-900 hover:text-amber-700 font-medium">Contact</a></li>
+                <li><a href="locations.html" class="text-amber-900 hover:text-amber-700 font-medium bg-amber-100">Locations</a></li>
+                <li><a href="social.html" class="text-amber-900 hover:text-amber-700 font-medium">Social</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <main class="pt-16">
+        <section class="hero py-16 bg-amber-900 text-white relative overflow-hidden">
+            <div class="absolute w-full h-full top-0 left-0 z-0 animate-pulse" style="background: url('./image4.jpg') center/cover no-repeat; opacity: 0.10;"></div>
+            <div class="hero-content text-center relative z-10">
+                <div class="max-w-4xl">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4 animate-bounce">Our Location</h1>
+                    <marquee class="text-xl opacity-90 font-bold text-amber-200 mb-2" behavior="scroll" direction="left">Diana Restaurant | Nyendo, Masaka City | Owner: Ampaire Diana Ritah | Contact: 0753434801</marquee>
+                    <p class="text-xl opacity-90">Visit us in the heart of Nyendo, Masaka City for authentic Ugandan cuisine and a warm family atmosphere.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Diana's Location Card -->
+        <section class="py-16">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row gap-8 items-center justify-center">
+                    <div class="card bg-white shadow-lg w-full md:w-2/3">
+                        <figure class="h-56">
+                            <img src="./image4.jpg" alt="Diana Restaurant Nyendo" class="w-full h-full object-cover rounded-t-lg" />
+                        </figure>
+                        <div class="card-body">
+                            <h3 class="card-title text-2xl text-amber-900 mb-2">Diana Restaurant - Nyendo, Masaka City</h3>
+                            <div class="space-y-3 mb-4">
+                                <div class="flex items-start space-x-3">
+                                    <svg class="w-5 h-5 text-gray-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    </svg>
+                                    <span class="text-gray-700">Nyendo, Masaka City, Uganda</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                    </svg>
+                                    <span class="text-gray-700">0753434801</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12v1m0 4v.01M8 12v1m0 4v.01M12 8v4m0 4v.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <span class="text-gray-700">Mon-Sun: 7:00 AM - 11:00 PM</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12v1m0 4v.01M8 12v1m0 4v.01M12 8v4m0 4v.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <span class="text-gray-700">Email: dianaritah@gmail.com</span>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <h4 class="font-semibold text-gray-900 mb-2">Services Available</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="badge badge-outline">Dine-in</span>
+                                    <span class="badge badge-outline">Takeaway</span>
+                                    <span class="badge badge-outline">Catering</span>
+                                    <span class="badge badge-outline">Private Events</span>
+                                </div>
+                            </div>
+                            <div class="card-actions">
+                                <a href="tel:0753434801" class="btn btn-primary bg-amber-600 border-amber-600 hover:bg-amber-700 flex-1">Call Now</a>
+                                <a href="mailto:dianaritah@gmail.com" class="btn btn-outline border-amber-600 text-amber-600 hover:bg-amber-50 flex-1">Email Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Special Services -->
+        <section class="py-16 bg-amber-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-amber-900 mb-4">Special Services</h2>
+                    <p class="text-xl text-gray-600">Additional services available at our main Nkozi location</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="card bg-white shadow-lg">
+                        <div class="card-body text-center">
+                            <div class="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-8 h-8 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"></path>
+                                </svg>
+                            </div>
+                            <h3 class="card-title text-amber-900 justify-center mb-3">Catering Services</h3>
+                            <p class="text-gray-600 mb-4">Professional catering for events, weddings, and corporate functions. Authentic Ugandan cuisine for your special occasions.</p>
+                            <button class="btn btn-primary bg-amber-600 border-amber-600 hover:bg-amber-700">Learn More</button>
+                        </div>
+                    </div>
+
+                    <div class="card bg-white shadow-lg">
+                        <div class="card-body text-center">
+                            <div class="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-8 h-8 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="card-title text-amber-900 justify-center mb-3">Private Events</h3>
+                            <p class="text-gray-600 mb-4">Host your private parties, family gatherings, or business meetings in our dedicated event space.</p>
+                            <button class="btn btn-primary bg-amber-600 border-amber-600 hover:bg-amber-700">Book Now</button>
+                        </div>
+                    </div>
+
+                    <div class="card bg-white shadow-lg">
+                        <div class="card-body text-center">
+                            <div class="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-8 h-8 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="card-title text-amber-900 justify-center mb-3">Extended Hours</h3>
+                            <p class="text-gray-600 mb-4">Open daily from 7 AM to 11 PM to serve you breakfast, lunch, dinner, and everything in between.</p>
+                            <button class="btn btn-primary bg-amber-600 border-amber-600 hover:bg-amber-700">View Hours</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-amber-900 text-white py-6 text-center mt-12">
+        <p class="text-amber-200">&copy; 2026 Diana Restaurant. Owned by Ampaire Diana Ritah. All rights reserved.</p>
+    </footer>
+</body>
+</html>

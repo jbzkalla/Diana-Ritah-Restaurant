@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diana Restaurant - Ampaire Diana Ritah</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.19/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="./styles.css">
+<link rel="icon" type="image/png" sizes="16x16" href="./imgs/favicon.ico">
+</head>
+<body class="font-inter">
+    <!-- Navigation -->
+    <nav class="navbar bg-white shadow-lg fixed top-0 z-50">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"></path>
+                    </svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a href="index.html" class="text-amber-900 hover:text-amber-700">Home</a></li>
+                    <li><a href="menu.html" class="text-amber-900 hover:text-amber-700">Menu</a></li>
+                    <li><a href="about.html" class="text-amber-900 hover:text-amber-700">About</a></li>
+                    <li><a href="contact.html" class="text-amber-900 hover:text-amber-700">Contact</a></li>
+                    <li><a href="locations.html" class="text-amber-900 hover:text-amber-700">Locations</a></li>
+                    <li><a href="social.html" class="text-amber-900 hover:text-amber-700">Social</a></li>
+
+                </ul>
+            </div>
+            <a href="index.html" class="btn btn-ghost text-xl text-amber-900 font-bold">
+                <svg class="w-8 h-8 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"></path>
+                </svg>
+                Diana Restaurant
+            </a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+                <li><a href="index.html" class="text-amber-900 hover:text-amber-700 font-medium">Home</a></li>
+                <li><a href="menu.html" class="text-amber-900 hover:text-amber-700 font-medium">Menu</a></li>
+                <li><a href="cart.html" class="text-amber-900 hover:text-amber-700 font-medium">Cart</a></li>
+                <li><a href="payment.html" class="text-amber-900 hover:text-amber-700 font-medium">Payment</a></li>
+                <li><a href="about.html" class="text-amber-900 hover:text-amber-700 font-medium">About</a></li>
+                <li><a href="contact.html" class="text-amber-900 hover:text-amber-700 font-medium">Contact</a></li>
+                <li><a href="locations.html" class="text-amber-900 hover:text-amber-700 font-medium">Locations</a></li>
+                <li><a href="social.html" class="text-amber-900 hover:text-amber-700 font-medium">Social</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="pt-16">
+        <section class="hero min-h-screen relative">
+            <marquee class="text-xl opacity-90 font-bold text-amber-200 mb-2 absolute top-0 left-0 w-full z-20" behavior="scroll" direction="left">Diana Restaurant | Nyendo, Masaka City | Owner: Ampaire Diana Ritah | Contact: 0753434801</marquee>
+            <div class="carousel w-full h-full absolute inset-0">
+                <div id="slide1" class="carousel-item relative w-full">
+                    <img src="https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=1200" class="w-full object-cover" alt="Restaurant interior" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide3" class="btn btn-circle bg-black bg-opacity-50 border-none text-white hover:bg-opacity-70">❮</a>
+                        <a href="#slide2" class="btn btn-circle bg-black bg-opacity-50 border-none text-white hover:bg-opacity-70">❯</a>
+                    </div>
+                </div>
+                <div id="slide2" class="carousel-item relative w-full">
+                    <img src=" https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&w=1200" class="w-full object-cover" alt="Delicious food" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide1" class="btn btn-circle bg-black bg-opacity-50 border-none text-white hover:bg-opacity-70">❮</a>
+                        <a href="#slide3" class="btn btn-circle bg-black bg-opacity-50 border-none text-white hover:bg-opacity-70">❯</a>
+                    </div>
+                </div>
+                <div id="slide3" class="carousel-item relative w-full">
+                    <img src="https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&w=1200" class="w-full object-cover" alt="Traditional cooking" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide2" class="btn btn-circle bg-black bg-opacity-50 border-none text-white hover:bg-opacity-70">❮</a>
+                        <a href="#slide1" class="btn btn-circle bg-black bg-opacity-50 border-none text-white hover:bg-opacity-70">❯</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-overlay bg-opacity-40"></div>
+            <div class="hero-content text-center text-neutral-content relative z-10">
+                <div class="max-w-4xl">
+                    <h1 class="mb-5 text-5xl md:text-7xl font-bold leading-tight">Diana Restaurant</h1>
+                    <p class="mb-8 text-xl md:text-2xl opacity-90 leading-relaxed">Experience authentic Ugandan cuisine crafted with passion and tradition</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="menu.html" class="btn btn-primary bg-amber-600 border-amber-600 hover:bg-amber-700 text-white px-8 py-4 text-lg">View Our Menu</a>
+                        <a href="contact.html" class="btn btn-outline border-white text-white hover:bg-white hover:text-amber-900 px-8 py-4 text-lg">Make a Reservation</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="py-16 bg-amber-50">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-amber-900 mb-2">Authentic Flavors</h3>
+                        <p class="text-gray-700">Traditional recipes passed down through generations, prepared with locally sourced ingredients.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-amber-900 mb-2">Fresh Daily</h3>
+                        <p class="text-gray-700">All our dishes are prepared fresh daily using the finest ingredients from local farmers and markets.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-amber-900 mb-2">Family Atmosphere</h3>
+                        <p class="text-gray-700">Enjoy a warm, welcoming environment where every guest is treated like family.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Signature Dishes Section -->
+        <section class="py-16 style background: linear-gradient(135deg, rgb(254 243 199) 0%, rgb(253 230 138) 100%);">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-amber-900 mb-4">Our Signature Dishes</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Discover the authentic tastes of Uganda with our carefully curated selection of traditional and modern dishes</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                        <figure class="h-48">
+                            <img src="./imgs/download.jpeg" alt="Matoke with Groundnut Sauce" class="w-full h-full object-cover" />
+                        </figure>
+                        <div class="card-body">
+                            <h3 class="card-title text-amber-900">Matoke with Groundnut Sauce</h3>
+                            <p class="text-gray-600">Traditional steamed green bananas in rich, creamy groundnut sauce with aromatic spices.</p>
+                        </div>
+                    </div>
+
+                    <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                        <figure class="h-48">
+                            <img src="https://images.pexels.com/photos/725991/pexels-photo-725991.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Grilled Tilapia" class="w-full h-full object-cover" />
+                        </figure>
+                        <div class="card-body">
+                            <h3 class="card-title text-amber-900">Grilled Tilapia</h3>
+                            <p class="text-gray-600">Fresh tilapia from Lake Victoria, perfectly grilled with local herbs and served with posho.</p>
+                        </div>
+                    </div>
+
+                    <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                        <figure class="h-48">
+                            <img src="./imgs/images.jpeg" alt="Luwombo" class="w-full h-full object-cover" />
+                        </figure>
+                        <div class="card-body">
+                            <h3 class="card-title text-amber-900">Luwombo</h3>
+                            <p class="text-gray-600">Traditional steamed dish wrapped in banana leaves with chicken, beef, or fish and vegetables.</p>
+                        </div>
+                    </div>
+
+                    <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                        <figure class="h-48">
+                            <img src="./imgs/download (1).jpeg" alt="Rolex" class="w-full h-full object-cover" />
+                        </figure>
+                        <div class="card-body">
+                            <h3 class="card-title text-amber-900">Rolex</h3>
+                            <p class="text-gray-600">Ugandan street food favorite - chapati rolled with eggs, vegetables, and your choice of meat.</p>
+                        </div>
+                    </div>
+
+                    <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                        <figure class="h-48">
+                            <img src="./imgs/download (2).jpeg" alt="Malewa" class="w-full h-full object-cover" />
+                        </figure>
+                        <div class="card-body">
+                            <h3 class="card-title text-amber-900">Grilled Beef</h3>
+                            <p class="text-gray-600">Tender, juicy grilled beef, seasoned to perfection and served hot — a true taste of tradition.</p>
+                        </div>
+                    </div>
+
+                    <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                        <figure class="h-48">
+                            <img src="https://images.pexels.com/photos/230325/pexels-photo-230325.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Sim-Sim Cookies" class="w-full h-full object-cover" />
+                        </figure>
+                        <div class="card-body">
+                            <h3 class="card-title text-amber-900">Sim-Sim Cookies</h3>
+                            <p class="text-gray-600">Traditional sesame seed cookies, perfectly sweet and crunchy - a beloved Ugandan treat.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="py-16 bg-amber-200 text-white">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-4xl font-bold mb-4">Ready to Experience Uganda's Finest Cuisine?</h2>
+                <p class="text-xl mb-8 opacity-90">Join us for an unforgettable culinary journey through the heart of Uganda</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contact.html" class="btn bg-amber-600 border-amber-600 hover:bg-amber-700 text-white px-8 py-4 text-lg">Make a Reservation</a>
+                    <a href="menu.html" class="btn bg-sky-600 btn-outline border-amber-300 text-amber-300 hover:bg-amber-300 hover:text-amber-900 px-8 py-4 text-lg">Order Online</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-amber-900 text-white py-6 text-center mt-12">
+        <p class="text-amber-200">&copy; 2026 Diana Restaurant. Owned by Ampaire Diana Ritah. All rights reserved.</p>
+    </footer>
+</footer>
+<script src="cart.js"></script>
+</body>
+</html>
